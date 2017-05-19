@@ -1,5 +1,7 @@
 body {
 	background-image: url("../images/background.png");
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 h1 {
@@ -8,7 +10,7 @@ h1 {
 	padding: 10px;
 	clear: both;
 	margin: 20px;
-	display: inline;
+	display: inline-block;
 	opacity: 0.7;
 	border: solid 1px #ddd;
 }
@@ -24,7 +26,60 @@ h1 {
 	opacity: 0.8;
 	width: 50%;
 	clear: both;
-	margin: 15px;
+	margin: 10px;
 	padding: 10px;
 	border: solid 1px #ddd;
+}
+
+#guessingnumberbox {
+	background-color: #ff4500;
+	float: left;
+	display: inline-block;
+	padding: 10px;
+	margin-top: 20px;
+	border: solid #ddd;
+	height: 200px;
+	width: 300px;
+}
+
+#scoreboard {
+	background-color: #03A9F4;
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	padding: 15px 20px 10px 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+	border: solid #ddd;
+	height: 200px;
+}
+
+#container {
+	width: 400px;
+	display: block;
+	position: relative;
+}
+
+#total-score{
+	display: block;
+	clear: both;
+	background-color: green;
+	float: left;
+	display: inline-block;
+	height: 150px;
+	width: 300px;
+	margin-top: 20px;
+	border: solid black;
+}
+
+
+
+#teams {
+	margin-top: 20px;
+	background-color: grey;
+	display: inline-block;
+	float: left;
+	height: 175px;
+	width: 500px;
+	border: solid black; 
 }
