@@ -7,46 +7,93 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body>
-
-	<div id ="wrapper">
-
-	<h1><span>Team Collectors</span></h1>
-
-	<div id ="instructions">
-		<p>You will be given a random number at the start of the game</p>
-		<p>There are four Teams below. By clicking on a Team you will add a specific amount of points to your total score.</p>
-		<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-		<p>The value of each Team is hidden from you until you click on it.</p>
-		<p>Each time when the game starts, the game will change the values of each Team.</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+			<h1><span>Team Collectors</span></h1>
+		</div>
 	</div>
-
-<!-- <div class="row guess"> -->
-	<div id="container">
-		<div id ="guessingnumberbox">
-			<div class="value">
+	
+		<div class="row">
+			<div class="col-md-10">
+			<div id ="instructions">
+			<p>You will be given a random number at the start of the game</p>
+			<p>There are four Teams below. By clicking on a Team you will add a specific amount of points to your total score.</p>
+			<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+			<p>The value of each Team is hidden from you until you click on it.</p>
+			<p>Each time when the game starts, the game will change the values of each Team.</p>
 			</div>
 		</div>
-	
-		<div id="scoreboard">
-			<h3><span id="status"></span></h3>
-			<h3>Wins: <span id="wins"></span></h3>
-			<h3>Losses: <span id="losses"></span></h3>
+	</div>
+			
+
+
+
+			<div class="row">
+				<div class="col-md-3">
+					<div id ="guessingnumberbox">
+						<p>40</p>
+					</div>
+				</div>
+		
+		
+
+			<div class="col-md-1">
+				<div id="scoreboard">
+					<h3><span id="status"></span></h3>
+					<h3>Wins: <span id="wins"></span></h3>
+					<h3>Losses: <span id="losses"></span></h3>
+				</div>
+			</div>
 		</div>
-	</div>
+
+		
+
+			<div class="row">
+				<div class="col-md-5">
+					<div id="teams"> 
+			 		 <button class="btn btn-default btn-lg normal-button"><img src="assets/images/atlantafalconslogo.png"></button>
+             		 <button class="btn btn-primary btn-lg normal-button"><img src="assets/images/AtlantaHawkslogo.png"></button>
+             		 <button class="btn btn-danger btn-lg normal-button"><img src="assets/images/clevelandcavaliers.png"></button>
+              		 <button class="btn btn-info btn-lg normal-button"><img src="assets/images/georgiatechlogo.png"></button>
+					</div>
+				</div>
+			</div>
+
+	
+			<div class="row">
+				<div class="col-md-3">
+			</div>
+		
+
+			<div id="total-score">
+				<h2><span id = "yts">Your Total Score is: </span></h2>
+					<p>40</p>
+			</div>
+		</div>
+
+	
+			<div id="scorebox"> </div>
+		</div>
+
+		<script>
+			
+		$(document).ready(function() {
+
+			var counter = 0;
+			var wins = 0;
+			var losses = 0;
+			$('#win').text(wins);
+			$('#loss').text(losses);
+	
+			newCrystals();
+			newGame();
+
+			function newCrystals () {
+			var numbers = []
+			
 
 
-	<div id="teams"> </div>
-
-	<div id="total-score">
-		<h2><span id = "yts">Your Total Score is: </span></h2>
-	</div>
-
-	<div id="scorebox"> </div>
-
-
-
-
-						
 
 
 
@@ -54,22 +101,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		</script>
 
 
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
