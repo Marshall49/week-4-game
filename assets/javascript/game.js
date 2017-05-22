@@ -46,37 +46,54 @@ $(document).ready(function() {
 	//function that checks to see if the game is over:
 	function checkGameStatus () {
 		if (currentScore = targetScore) {
+			$('#scorebox').text('You won!!!!');
 			wins++;
 			// some other stuff happens, aka we either start a new game, display "you win!", etc;
 		} else if (currentScore > targetScore) {
+			$('#scorebox').text('You lose!!!!');
 			losses++;
 			// some other stuff happens, start a new game, display "you lose!", etc.
 		} else { return }
 
 	}
+
+	// checkGameStatus();
 		
 	function takingAturn () {
 	//middle of the game, taking a 'turn':
 	$("#falcons").on("click", function () {
 		currentScore = currentScore + falconsNumber;
 		checkGameStatus();
+		$("#total-score").html(totalScore);
 	});
 	
 	$("#uga").on("click", function () {
 		currentScore = currentScore + ugaNumber;
 		checkGameStatus();
+		$("#total-score").html(totalScore);
 	});
 
 	$("#hawks").on("click", function () {
 		currentScore = currentScore + hawksNumber;
 		checkGameStatus();
+		$("#total-score").html(totalScore);
 	});
 
 	$("#gaTech").on("click", function () {
 		currentScore = currentScore + gaTechNumber;
 		checkGameStatus();
+		$("#total-score").html(totalScore);
 	});
-	
+
+	}
+
+});
+
+	// takingAturn();
+
+
+
+
 
 	
 
