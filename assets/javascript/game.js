@@ -16,10 +16,10 @@ $(document).ready(function() {
 
 	//the user's current score gets updated throughout the game, specifically every time you click on a team
 	var currentScore;
-	//there will be a conditional (if) statement that checks the value of currentScore compared to targetScore
-	//if that value is lower, the game continues
-	//if the value is HIGHER, the game is over, and we add to losses
-	//if the value is EQUAL, the game is over, and we add to wins
+	// there will be a conditional (if) statement that checks the value of currentScore compared to targetScore
+	// if that value is lower, the game continues
+	// if the value is HIGHER, the game is over, and we add to losses
+	// if the value is EQUAL, the game is over, and we add to wins
 
 	function gameStart() {
 
@@ -57,39 +57,43 @@ $(document).ready(function() {
 
 	}
 
-	// checkGameStatus();
+	checkGameStatus();
 		
 	function takingAturn () {
-	//middle of the game, taking a 'turn':
-	$("#falcons").on("click", function () {
-		currentScore = currentScore + falconsNumber;
-		checkGameStatus();
-		$("#total-score").html(totalScore);
+	// middle of the game, taking a 'turn':
+	 $("#falcons").on("click", function() {
+        var totalScore = currentScore + falconsNumber;
+        checkGameStatus();
+        $("#total-score").append(totalScore);
 	});
 	
-	$("#uga").on("click", function () {
-		currentScore = currentScore + ugaNumber;
-		checkGameStatus();
-		$("#total-score").html(totalScore);
-	});
+	 $("#uga").on("click", function() {
+        var totalScore = currentScore + ugaNumber;
+        checkGameStatus();
+        $("#total-score").append(totalScore);
+    });
 
-	$("#hawks").on("click", function () {
-		currentScore = currentScore + hawksNumber;
-		checkGameStatus();
-		$("#total-score").html(totalScore);
-	});
-
-	$("#gaTech").on("click", function () {
-		currentScore = currentScore + gaTechNumber;
-		checkGameStatus();
-		$("#total-score").html(totalScore);
-	});
-
-	}
+	   $("#gaTech").on("click", function() {
+        var totalScore = currentScore + gaTechNumber;
+        checkGameStatus();
+        $("#total-score").append(totalScore);
+    });
+	
+		$("#hawks").on("click", function() {
+        var totalScore = currentScore + hawksNumber;
+        checkGameStatus();
+        $("#total-score").append(totalScore);
+    });
 
 });
 
-	// takingAturn();
+	takingAturn();
+
+		var add = [1,2,3,4];
+		var total = 0;
+		for(var i = 0; i < add.length; i++) {
+   		 total += add[i];
+	}
 
 
 
@@ -126,3 +130,137 @@ $(document).ready(function() {
 	// $('#loss').text(losses);
 
 // console.log("Hello from game.js")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var wins = 0;
+// var losses = 0;
+
+// var scorebox = 0;
+
+// var guessingnumberbox = Math.floor((Math.random()* 100)
+// var falconsNumber = Math.floor((Math.random()* 10) + 1);
+// var ugaNumber = Math.floor((Math.random()* 10) + 1);
+// var gaTechNumber = Math.floor((Math.random()* 10) + 1);
+// var hawksNumber = Math.floor((Math.random()* 10) + 1);
+
+
+// var updateScorebox = function (){
+// 	$('.scorebox').empty();
+// 	$('.scorebox').append(add);
+// 	$('#wins').empty();
+// 	$('#wins').append(wins);
+// 	$('#losses').empty();
+// 	$('#losses').append(losses);
+// }
+
+// var restart = function(){
+// 	scorebox = 0;
+//     guessingnumberbox = Math.floor((Math.random()* 100);
+
+// 	$('.scorebox').empty();
+// 	$('.scorebox').append(scorebox);
+
+// 	falconsNumber = Math.floor((Math.random()* 12) + 1);
+//     ugaNumber = Math.floor((Math.random()* 12) + 1);
+//     hawksNumber = Math.floor((Math.random()* 12) + 1);
+//     gaTechNumber = Math.floor((Math.random()* 12) + 1);
+//     //alert('restart');
+//     updateScorebox();
+// }
+// var takingAturn = function (){
+// 	if (scorebox == guessingnumberbox) {
+// 		wins = wins + 1;
+		
+		
+// 		restart();
+// 	}else if(scorebox > guessingnumberbox){
+// 		losses = losses + 1;
+		
+		
+// 		restart();
+// 	}else{
+// 		updateScorebox();
+// 	}
+// }
+// $('.guessingnumberbox').append(scorebox);
+
+// $('.scorebox').append(scorebox);
+// //function
+
+// $(document).ready(function(){
+// 	$('#falcons').click(function(){
+// 		scorebox = scorebox + falconsNumber;
+// 		takingAturn();
+// 	})
+// 	$('#uga').click(function(){
+// 		scorebox = scorebox + ugaNumber;
+// 		takingAturn();
+// 	})
+// 	$('#gaTech').click(function(){
+// 		scorebox = scorebox + gaTechNumber;
+// 		takingAturn();
+// 	})
+// 	$('#hawks').click(function(){
+// 		scorebox = scorebox + hawksNumber;
+// 		takingAturn();
+// 	})
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
