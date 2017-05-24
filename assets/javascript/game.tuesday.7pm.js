@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	//numbers
+	debugger;
 	//these are all going to get a random value at the START of each game
 	var targetScore;
 
@@ -22,7 +23,7 @@ $(document).ready(function() {
 
 	function gameStart() {
 
-	targetScore = Math.floor(Math.random() * 100) + 20;
+	targetScore = Math.floor(Math.random() * 100);
 
 	$("#guessingnumberbox").html(targetScore);
 	console.log(targetScore);
@@ -48,16 +49,16 @@ $(document).ready(function() {
             //LOSING
             alert("LOST");
             losses = losses + 1;
-            $("#losses").html(losses);
-            gameStart();
+            $("#losses").html("Losses: " + losses);
+            // resetValues();
         }
 
         if (targetScore == currentScore){
             alert("WIN");
             //WINNING
             wins = wins + 1;
-            $("#wins").html(wins);
-            gameStart();
+            $("#wins").html("Wins: " + String(wins));
+            // resetValues();
         }
     }
 
@@ -66,31 +67,29 @@ $(document).ready(function() {
     	function takingAturn () {
 	// middle of the game, taking a 'turn':
 	 $("#falcons").on("click", function() {
-        currentScore = currentScore + falconsNumber;
+        var currentScore = currentScore + falconsNumber;
         // resetValues();
-        $("#total-score").html(currentScore);
+        $("#total-score").append(totalScore);
         addTotal();
 	});
 	
 	 $("#uga").on("click", function() {
-        currentScore = currentScore + ugaNumber;
+        var currentScore = currentScore + ugaNumber;
         // resetValues();
-        $("#total-score").html(currentScore);
-        addTotal();
+        $("#total-score").append(totalScore);
     });
 
 	   $("#gaTech").on("click", function() {
-        currentScore = currentScore + gaTechNumber;
+        var currentScore = currentScore + gaTechNumber;
         // resetValues();
-        $("#total-score").html(currentScore);
-        addTotal();
+        $("#total-score").append(totalScore);
     });
 	
 		$("#hawks").on("click", function() {
-        currentScore = currentScore + hawksNumber;
+        var currentScore = currentScore + hawksNumber;
         // resetValues();
-        $("#total-score").html(currentScore);
-        addTotal();
+        $("#total-score").append(totalScore);
+
 	});
 	}
 
